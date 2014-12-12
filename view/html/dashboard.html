@@ -1,0 +1,169 @@
+<style>
+.nvc_selection { height: 150px; margin: 35px auto; }
+
+.nvc_selection li { background: white; float:left; height: 150px; margin-right: 4px; overflow: hidden; position: relative; width: 200px;
+
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+    
+
+	transition: all 300ms linear;	
+
+    -webkit-transition: all 300ms linear;
+
+    -moz-transition: all 300ms linear;
+
+    -o-transition: all 300ms linear;
+
+    -ms-transition: all 300ms linear;
+
+}
+
+
+
+.nvc_selection li a { color: #666; display: block; height: 100%; position: relative; text-align: center; text-decoration: none; width: 100%; }
+
+.nvc_selection li a:hover { color: white; }
+
+.nvc_item { height: 55%; left: 0px; position: absolute; top: 21%; width: 100%; }
+
+.nvc_link { font-size: 30px; opacity: 0.8; text-align: center;
+
+    transition: all 200ms linear;
+
+    -webkit-transition: all 200ms linear;
+
+    -moz-transition: all 200ms linear;
+
+    -o-transition: all 200ms linear;
+
+    -ms-transition: all 200ms linear;
+
+}
+
+.nvc_tagline { bottom: 0px; color: white; font-size: 14px; left: 0px; position: absolute; text-align:center; width: 100%; 
+
+	opacity: 0;
+
+    transition: all 200ms linear;
+
+    -webkit-transition: all 200ms linear;
+
+    -moz-transition: all 200ms linear;
+
+    -o-transition: all 200ms linear;
+
+    -ms-transition: all 200ms linear;
+
+}
+
+.nvc_selection li:hover{ background-color: #333; z-index: 999;
+
+    transform: scale(1.1);  
+
+    -webkit-transform: scale(1.1);  
+
+    -moz-transform: scale(1.1);  
+
+    -ms-transform: scale(1.1);   
+
+    -o-transform: scale(1.1);   
+
+	
+
+	border-radius: 10px;
+
+	
+
+	box-shadow: 0 10px 15px black;
+
+	-moz-box-shadow: 0 0 10px black;
+
+	-webkit-box-shadow: 0 0 15px black;
+
+}
+
+.nvc_selection li:hover .nvc_link { 
+
+
+	color: #ffffff;
+
+   
+}
+
+.nvc_selection li:hover .nvc_tagline { 
+
+	opacity: 0.8;
+
+	color: orange;
+
+    -webkit-animation: moveFromBottom 500ms ease;
+
+    -moz-animation: moveFromBottom 500ms ease;
+
+    -ms-animation: moveFromBottom 500ms ease;
+
+}
+
+
+
+</style>
+<script type="text/javascript" src="http://www.kybproductions.net/kybdemo/images/swfobject_2.js"></script>
+<div>
+<ul class="nvc_selection">
+	<li>
+		<a href="{SETTINGSURL}">
+			<div class="nvc_item">
+				<h2 class="nvc_link">SqueezePage Settings</h2>
+				<div>Manage SqueezePage Template Settings</div>
+			</div>
+		</a>
+	</li>	
+	<li>
+		<a href="{SUBMITURL}">
+			<div class="nvc_item">
+				<h2 class="nvc_link">SqueezePage Submissions</h2>
+				<div>View/Download SqueezePage Submissions</div>
+				
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="{PAGEURL}">
+			<div class="nvc_item">
+				<h2 class="nvc_link">SqueezePage Content</h2>
+				<div>Manage SqueezePage Content</div>
+				
+			</div>
+		</a>
+	</li>	
+</ul>
+<script type="text/javascript">
+			var flashvars = {};
+			flashvars.vid_url = "http://www.kybproductions.net/kybdemo/images/flv/squeezepage_training.flv";
+			flashvars.img_url = "http://www.kybproductions.net/kybdemo/images/preview.jpg"; 
+			flashvars.autoplay = "false"; // Auto play on/off : currently off
+			flashvars.mute = "false"; // Mute/unmute : currently unmuted
+			flashvars.volume = "60"; // Volume : currently at 60%
+			flashvars.loop = "false"; // Loop video on/off: currently off
+			flashvars.vid_width = "650"; // Width of the player = width of the video + 10 px : currently 430px
+			flashvars.vid_height = "450"; // Height of the player = height of the video + 20px : currently 350px
+			var params = {};
+			params.menu = "false";
+			params.scale = "noscale";
+			params.bgcolor = "0x00000";
+			params.allowfullscreen = "true";
+			params.wmode = "opaque";
+			var attributes = {};
+			swfobject.embedSWF("http://www.kybproductions.net/kybdemo/images/FLV_player_F8.swf", "citypromo", "650", "450", "9.0.0", "http://www.nafa.org/expressInstall.swf", flashvars, params, attributes);
+		</script>
+		<div id="citypromo">
+			<a href="http://www.adobe.com/go/getflashplayer">
+			<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+		</div>
+</div>

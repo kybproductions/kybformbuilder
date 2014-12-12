@@ -1,0 +1,168 @@
+<style>
+
+select {
+	width: 295px;
+}
+</style>
+<br>
+<div style="background-color:#ffffff;">
+<!-- Row -->
+<div class="row-fluid">
+
+	<!-- Column -->
+	<div  style="float:left;width:580px;padding-right:20px;">
+	
+		<!-- Widget -->
+		<div class="widget" data-toggle="collapse-widget" data-collapse-closed="false">
+
+			<!-- Widget heading -->
+			<div class="widget-head">
+				<h4 class="heading">Form Details</h4>
+			</div>
+			<!-- // Widget heading END -->
+
+			<!-- // Widget body -->
+			<div class="widget-body">
+				<div class="row-fluid">
+					<br>
+
+					<label>Form Name&nbsp;:&nbsp;</label>
+					<input type="text" class="span8" name="form_title" id="formname" value="{formname}"/>
+					<div class="clear"></div>
+
+					<label>Response Email&nbsp;:&nbsp;</label>
+					<input type="text" class="span8" name="email_responses" id="email"  value="{email}"/>
+					<div class="clear"></div>
+
+					<label>Form Website Page&nbsp;:&nbsp;</label>
+					{webpages}
+					<div class="clear"></div>
+
+					<label>RSVP Required?&nbsp;:&nbsp;</label>					
+					<select name="form_rsvp" id="form_rsvp" class="span8">{rsvpoptions}</select>
+					<div class="clear"></div>
+
+					<label>Form Link (if any)&nbsp;:&nbsp;</label>
+					<input type="text" name="form_link" id="formlink" class="span8" value="{form_link}">
+					<div class="clear"></div>
+
+					<label>Does this form expire?&nbsp;:&nbsp;</label>		
+					<select name="form_toexpire" id="form_toexpire" class="span8">{expireoptions}</select>
+					<div class="clear"></div>
+
+					<label>Expiration Date&nbsp;:&nbsp;</label>
+					<input type="text" name="form_expiration" id="datepicker" class="span5" value="{expdate}"><span class="instruction">(mm/dd/yyyy)</span>
+					<div class="clear"></div>
+
+					<label>Does this form require payment?&nbsp;:&nbsp;</label>		
+					<select name="form_payment" id="payment" class="span8">{paymentoptions}</select>
+					<div class="clear"></div>
+
+					<label>Is This a Login Form?&nbsp;:&nbsp;</label>	
+					<select name="form_login" id="form_login" class="span8">{loginoptions}</select>
+					<div class="clear"></div>
+
+					<label>Add As A WP User?&nbsp;:&nbsp;</label>	
+					<select name="form_addtowp" id="form_addtowp" class="span8">{wpoptions}</select>
+					<div class="clear"></div>
+
+					<label>PayPal Merchant Account&nbsp;:&nbsp;</label>
+					<input type="text" name="form_paypal_account" id="form_paypal_account" class="span5" value="{form_paypal_account}">
+					<div class="clear"></div>
+
+					<label>Will this form require uploading of files?&nbsp;:&nbsp;</label>	
+					<select name="form_upload" id="upload" class="span8">{fileoptions}</select>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!-- // Widget body END -->
+			
+		</div>
+
+		<!-- Widget -->
+		<div class="widget" data-toggle="collapse-widget" data-collapse-closed="false">
+
+			<!-- Widget heading -->
+			<div class="widget-head">
+				<h4 class="heading">Form Responses</h4>
+			</div>
+			<!-- // Widget heading END -->
+
+			<!-- // Widget body -->
+			<div class="widget-body">
+				<div class="row-fluid">
+					<br>
+
+					<label class="toplabel">Outline below the instructions for the users&nbsp;:&nbsp;</label>
+					{instructions}
+					<br>
+
+					<label class="toplabel">Outline below submission list Introduction&nbsp;:&nbsp;</label>
+					<div class="clear"></div>
+					{listintro}
+					<div class="clear"></div>
+
+					<br>
+
+					<label class="toplabel">Enter below the response after submission&nbsp;:&nbsp;</label>
+					<div class="clear"></div>
+					{response}
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<!-- // Widget body END -->
+		</div>
+	</div>
+
+	<!-- Column -->
+	<div  style="float:left;width:600px;">
+	
+		<!-- Widget -->
+		<div class="widget" data-toggle="collapse-widget" data-collapse-closed="false">
+
+			<!-- Widget heading -->
+			<div class="widget-head">
+				<h4 class="heading">Form Settings</h4>
+			</div>
+			<!-- // Widget heading END -->
+
+			<!-- // Widget body -->
+			<div class="widget-body">
+				<div class="row-fluid">
+					<br>
+
+					<label>Form Alignment&nbsp;:&nbsp;</label>
+					<select name="form_align" id="form_align" class="span8">{alignmentoptions}</select>
+					<div class="clear"></div>
+
+					<label>Show Form Submissions?&nbsp;:&nbsp;</label>
+					<select name="form_listing" id="form_listing" class="span8">{listingsoptions}</select>
+					<div class="clear"></div>
+
+					<label>Title Color&nbsp;:&nbsp;</label>
+					<input type="text" name="section_title_color" id="section_title_color" value="#{section_title_color}" class="span8" data-default-color="#9f1d1d" />
+					<div class="clear"></div>
+
+					<label>Border Color&nbsp;:&nbsp;</label>
+					<input type="text" name="section_border_color" id="section_border_color" class="span8" value="#{section_border_color}" data-default-color="#DDDDDD" >
+					<input type="checkbox" name="section_border_show" id="section_border_show" {bordercheck}>&nbsp;Show Border
+					<div class="clear"></div>
+
+					<label>Label Color&nbsp;:&nbsp;</label>					
+					<input type="text" name="label_color" id="label_color" class="span8" value="#{label_color}" data-default-color="#464646">
+					<input type="checkbox" name="label_bold" id="label_bold" {boldcheck}>&nbsp;Bold Label
+					<div class="clear"></div>
+
+					<label>Background Color&nbsp;:&nbsp;</label>
+					<input type="text" name="input_bg" id="input_bg" class="span8" value="#{input_bg}" data-default-color="#DDDDDD" >
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!-- // Widget body END -->
+			
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+

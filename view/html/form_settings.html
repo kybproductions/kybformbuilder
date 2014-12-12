@@ -1,0 +1,150 @@
+<script language="javascript" type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('#upload_image_button_2').click(function() {
+	 formfield = jQuery('#upload_image2').attr('name');
+	 tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
+	 window.send_to_editor = function(html) {
+	  imgurl = jQuery('img',html).attr('src');
+	  jQuery('#upload_image2').val(imgurl);
+	  jQuery('#image_view2').attr('src', imgurl);
+	  tb_remove();
+	 }
+	 return false;
+	});
+});
+</script>
+{INTRODUCTION}
+<div align="left" style="margin-top:30px;background-color:#ffffff;">
+<div style="margin-left:50px;">
+<form name="StoreSetting" action="{ADMINURL}" method="POST">
+<input type="hidden" name="process" id="process" value="{PROCESS}">
+<!-- Row -->
+<div class="row-fluid">
+
+	<!-- Column -->
+	<div class="span8">
+	
+		<!-- Widget -->
+		<div class="widget" data-toggle="collapse-widget" data-collapse-closed="false">
+
+			<!-- Widget heading -->
+			<div class="widget-head">
+				<h4 class="heading">Company Settings</h4>
+			</div>
+			<!-- // Widget heading END -->
+			
+			<div class="widget-body">
+				<div class="row-fluid">
+					<span class="gritter-add-primary btn btn-primary btn-block">Company Information</span>
+					<br>
+
+					<label>Company Name&nbsp;:&nbsp;</label>
+					<input type="text" class="span9" name="company" id="company" value="{COMPANY}"/>
+					<div class="clear"></div>
+
+					<label>Company Tagline&nbsp;:&nbsp;</label>
+					<input type="text" name="tagline" id="tagline" class="span9" value="{TAGLINE}">
+					<div class="clear"></div>
+
+					<label>Company Address&nbsp;:&nbsp;</label>
+					<input type="text" name="address" id="address" class="span9" value="{ADDRESS}">
+					<div class="clear"></div>
+
+					<label>Company City&nbsp;:&nbsp;</label>
+					<input type="text" name="city" id="city" class="span9" value="{CITY}">
+					<div class="clear"></div>
+
+					<label>Company State&nbsp;:&nbsp;</label>
+					<select name="state"  id="select2_1" class="style1 txt1 span9">
+						<option value="">Select...</option>
+						{STATEOPTIONS}
+					</select>
+					<div class="clear"></div>
+
+					<label>Company Zip&nbsp;:&nbsp;</label>
+					<input type="text" name="zip" id="zip" class="span9" value="{ZIP}">
+					<div class="clear"></div>
+
+					<label>Company Phone&nbsp;:&nbsp;</label>
+					(<input type="text" name="phone1" id="phone1" style="width:75px;" value="{PHONE1}">) - <input type="text" name="phone2" id="phone2" style="width:75px;" value="{PHONE2}"> - <input type="text" name="phone3" id="phone3" style="width:75px;" value="{PHONE3}">
+					<div class="clear"></div>
+
+					<label>Company Zip&nbsp;:&nbsp;</label>
+					<input type="text" name="zip" id="zip" class="span9" value="{ZIP}">
+					<div class="clear"></div>
+
+					<label>Company Logo&nbsp;:&nbsp;</label>
+					<div class="span5">
+						<input id="upload_image2" type="text" class="span12" name="upload_image2" value="{LOGOIMAGE}" />
+						<input id="upload_image_button_2" type="button" name="upload_image_button_2" class="btn btn-block btn-inverse divbtn" value="Upload/Select Image" />
+						<div class="clear"></div>
+						Enter a URL or upload an image for the header image.
+					</div>
+					<div class="span4">
+						<img src="{LOGOIMAGE}" width="150" id="image_view2"/>
+					</div>
+					<div class="clear"></div>
+
+					<label>Form Response Page&nbsp;:&nbsp;</label>
+					{webpages}
+					<div class="clear"></div>
+
+				</div>
+			</div>
+		</div>
+		<!-- // Widget END -->
+	</div>
+</div>
+<div class="row-fluid">
+	<!-- Column -->
+	<div class="span8">
+	
+		<!-- Widget -->
+		<div class="widget" data-toggle="collapse-widget" data-collapse-closed="true">
+
+			<!-- Widget heading -->
+			<div class="widget-head">
+				<h4 class="heading">Payment Method Settings</h4>
+			</div>
+			<!-- // Widget heading END -->
+			
+			<div class="widget-body">
+				<div class="row-fluid">
+					<span class="gritter-add-primary btn btn-primary btn-block">Authorize.net Method Settings</span>
+					<br>
+					<label>Anet Account&nbsp;:&nbsp;</label>
+					<input type="text" name="MerchantID" id="MerchantID" class="span9" value="{ANETMERCHANT}">
+					<div class="clear"></div>
+
+					<label>Anet Key&nbsp;:&nbsp;</label>
+					<input type="password" name="MerchantKey" id="MerchantKey" class="span9" value="{ANETKEY}">
+					<div class="clear"></div>
+
+					
+					<span class="gritter-add-primary btn btn-primary btn-block">PayPal Account Settings</span>
+					<br>
+					<label>PayPal Account&nbsp;:&nbsp;</label>
+					<input type="text" name="paypal_business" id="paypal_business" class="span9" value="{PAYPALBUSINESS}">
+					<div class="clear"></div>
+
+					<label>Header Image&nbsp;:&nbsp;</label>
+					<div class="span5">
+						<input id="upload_image" type="text" class="span12" name="upload_image" value="{HEADERIMAGE}" /><br>
+						<input id="upload_image_button" type="button" class="btn btn-block btn-inverse divbtn" value="Upload/Select Image" />
+						<div class="clear"></div>
+						Enter a URL or upload an image for the header image.
+					</div>
+					<div class="span4">
+						<img src="{HEADERIMAGE}" width="150" id="image_view"/>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<!-- // Widget END -->
+	</div>
+</div>
+<input type="submit" name="Submit" id="Submit" class="btn btn-block btn-inverse divbtn" value="Submit">
+</form>
+</div>
+</div>

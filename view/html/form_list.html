@@ -1,0 +1,31 @@
+<div class="text4" style="margin-left:30px;"><p><b>Select Form to update</b>&nbsp;&nbsp;<a style="font-size:13px;" href="{ADMINURL}&process=CreateForm">Create New Form</a></p>
+<p>(click on form title to edit form)</p>
+<p id="linktocopy"></p>
+<form name="FormList" action='' method="POST">
+<table class="table table-bordered table-striped" style="width:95%">				
+	<!-- Table heading -->
+	<thead>
+		<tr>
+			<th>Form Titles</th>
+			<th>Expiration</th>
+			<th>Form Status</th>
+			<th>Form Hook</th>
+			<th>Copy Link</th>
+			<th>Submissions</th>
+			<th>Edit Form Layout</th>
+			<th>Delete Form</th>
+			<th>Preview Form</th>
+			<th>Duplicate Form</th>
+		</tr>
+	</thead>
+	<!-- // Table heading END -->
+	
+	<!-- Table body -->
+	<tbody>			
+		{FORMLIST}
+	</tbody>
+	<!-- // Table body END -->
+	
+</table>
+
+</form>
