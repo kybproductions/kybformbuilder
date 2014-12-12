@@ -7,7 +7,7 @@ Author: KYB Productions
 Author URI: http://www.kybproductions.net
 Version: 2.0 
 
-Copyright 2014 KYB PRODUCTIONS
+Copyright 2014-2015 KYB PRODUCTIONS, LLC
 */  
 //Record Errors
 @ini_set('error_reporting', E_ALL ^ E_NOTICE);
